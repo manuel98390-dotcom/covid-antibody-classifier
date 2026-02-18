@@ -3,13 +3,6 @@ __pycache__/
 *.pyc
 *.pyo
 
-# Data (no subir datos reales)
-data/raw/
-data/processed/
-
-# Results / artifacts
-results/
-models/
 
 # macOS
 .DS_Store
