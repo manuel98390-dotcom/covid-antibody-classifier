@@ -25,9 +25,13 @@ El proyecto demuestra el diseño modular de una arquitectura reproducible, desde
 
 Construir un dataset estructurado y reproducible a partir de exportaciones IMGT, transformando secuencias de aminoácidos en vectores numéricos mediante factores de Atchley, para entrenar modelos capaces de distinguir anticuerpos relacionados con SARS-CoV-2.
 
----
+## Colaboración institucional
 
-## 📊 Fuentes de datos
+Este trabajo forma parte de una colaboración técnica con el **Instituto Nacional de Salud Pública (INSP, México)**, enfocada en el análisis computacional de anticuerpos y la aplicación de técnicas de aprendizaje automático en contextos biomoleculares reales.
+
+El desarrollo del pipeline refleja un enfoque reproducible y modular para el procesamiento de datos inmunológicos, desde secuencias crudas hasta modelos supervisados evaluados bajo métricas robustas.
+
+## Fuentes de datos
 
 - OAS (Observed Antibody Space) → anticuerpos no relacionados con SARS-CoV-2.
 - CoV-AbDab (Coronavirus Antibody Database) → anticuerpos relacionados con SARS-CoV-2.
@@ -38,15 +42,15 @@ Más detalles técnicos en `DATASET.md`.
 
 ---
 
-## ⚙️ Pipeline implementado
+## Pipeline implementado
 
-### 1️⃣ Limpieza de datos IMGT
+### 1️ Limpieza de datos IMGT
 - Eliminación de valores NaN en regiones clave.
 - Eliminación de secuencias con símbolo ``.
 - Eliminación de IDs duplicados.
 - Emparejamiento VH–VL por `Sequence ID`.
 
-### 2️⃣ Transformación a factores de Atchley
+### 2️ Transformación a factores de Atchley
 Cada región IMGT:
 - FR1
 - CDR1
@@ -61,32 +65,11 @@ Resultado:
 - 25 features para VL
 - Total: 50 características por anticuerpo
 
-### 3️⃣ Construcción del dataset final
+### 3️ Construcción del dataset final
 Se genera un CSV estructurado con:
 - Features VH
 - Features VL
 - Etiqueta binaria `is_sarscov2_related`
-
----
-
-## Estructura del repositorio
-
-src/
-├── atchley/
-│    ├── factors.py
-│    ├── transform.py
-│    ├── pipeline.py
-│    └── make_dataset.py
-├── train.py
-└── balance_dataset.py
-
-data/
-├── raw/          # Exportaciones IMGT originales
-└── processed/    # Datasets generados
-
-models/            # Modelos entrenados
-results/           # Métricas y reportes
-
 
 
 ## Cómo ejecutar el proyecto
