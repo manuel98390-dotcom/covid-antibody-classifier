@@ -1,0 +1,34 @@
+{
+  "covabdab": {
+    "n_input_heavy": 3505,
+    "n_input_light": 3505,
+    "n_heavy_clean": 3501,
+    "n_light_clean": 2637,
+    "n_pairs_merged": 2634,
+    "n_pairs_valid": 2633,
+    "n_pairs_dropped_invalid_aa": 1,
+    "heavy_nan_rows": 0,
+    "light_nan_rows": 2,
+    "heavy_star_rows": 4,
+    "light_star_rows": 866,
+    "heavy_dups": 0,
+    "light_dups": 0
+  },
+  "oas": {
+    "n_input_heavy": 76855,
+    "n_input_light": 76855,
+    "n_heavy_clean": 74980,
+    "n_light_clean": 71895,
+    "n_pairs_merged": 71891,
+    "n_pairs_valid": 71891,
+    "n_pairs_dropped_invalid_aa": 0,
+    "heavy_nan_rows": 1,
+    "light_nan_rows": 218,
+    "heavy_star_rows": 3,
+    "light_star_rows": 3040,
+    "heavy_dups": 1871,
+    "light_dups": 1702
+  },
+  "final_rows": 74524,
+  "final_cols": 52
+}
